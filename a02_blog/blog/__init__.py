@@ -5,6 +5,11 @@ def create_app(test_config=None):
 
     @app.route('/')
     def index():
-        return "index page!"
+        return 'index page'
+
+    @app.route('/<string:name>')
+    def test(name):
+        name = name.capitalize()
+        return f'hello, {name}'
 
     return app
