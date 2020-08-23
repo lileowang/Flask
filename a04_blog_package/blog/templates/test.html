@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block heading %}
+    Hello, {{ name }}
+{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for hobby in hobbies %}
+            <li>{{ hobby }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('index') }}">go to index</a>
+{% endblock %}
